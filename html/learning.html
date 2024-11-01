@@ -1,0 +1,126 @@
+<!-- opening tag> - </closing tag> -->
+<!-- heading element: signify the importance of the content below -->
+<!-- only use one h1 per page -->
+<!-- some elements exits to indicate some parts of our web pages
+    or content area this mare our HTML coe more readeable and help with Search Engine Optimization (SEO)
+-->
+<!-- Indentation inside an nested element make easier to read the code (2 spaces to the right.) -->
+<!-- A element without a closing tag is known like void element -->
+<!-- attributs are special words inside the opening tags of an element to control the element's behavior -->
+<!-- semantic elements help with SEO and accessibility like section element-->
+<!-- some elements are self-contained elements like figuret that allows you associate an image with a caption. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>hello, world</title>
+</head>
+<body>
+    <main>
+        <!-- The content must be unique and does't have repeat in our webpage -->
+        <h1>The main heading of a webpage</h1> 
+        <!-- Img allos you to add images and src attribute to indicate the image's url-->
+        <!-- alt atribute shows up if the image it doesn't load and it is used for screen readers to improve accesibility--> 
+        <!-- You can convert an image into a link.-->
+        <p>Go anothe site <a href="/home/roaacan/responsive-web-design/html/cat-photo-app/index.html">click here</a></p>
+        <a href="https://x.com/roaacan" target="_blank">
+            <img src="https://pbs.twimg.com/profile_images/1843112960543105024/kDXPPOZQ_400x400.jpg" alt="Rony's profile picture">
+        </a>
+        <section>
+            <!-- Section is useful to create your section documents-->
+            <h2>Introduction</h2>
+            <p>This is a paragraph I can use it to write the content of my introduction.</p>
+            <!-- anchor elements links another webpages you can convert any text into a link-->
+            <!-- use the target="_blank" attribute to open the link in a new tab-->
+            <a href="https://x.com/roaacan" target="_blank">Rony's X's profile</a>
+        </section>
+        <section>
+            <h2>Theory</h2>
+            <p>This theory was writen by an amazing person knwos as <a href="https://x.com/roaacan" target="_blank">Rony</a></p>
+            <h3>First Part</h3>
+            <!-- This doesn't affect the display and  allows you to innactive elements without delete them-->
+            <h3>Second Part</h3>
+        </section>
+        <section>
+            <h2>Conclusions</h2>
+            <h3>Unordered list</h3>
+            <ul>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ul>
+            <figure>
+                <img src="https://pbs.twimg.com/profile_images/1843112960543105024/kDXPPOZQ_400x400.jpg" alt="Rony's profile picture">
+                <!-- em for emphaze a word-->
+                <figcaption>Rony is so <em>handsome</em> I love him.</figcaption>
+            </figure>
+            <h3>Ordered list</h3>
+            <ol>
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ol>
+            <figure>
+                <img src="https://pbs.twimg.com/profile_images/1843112960543105024/kDXPPOZQ_400x400.jpg" alt="Rony's profile picture">
+                <!-- strong element to indicate that something is important or urgent -->
+                <figcaption>Rony is so <strong>handsome</strong> I love him.</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h2>Forms elements to collect user info</h2>
+            <form action="path/">
+                <fieldset>
+                    <legend>Choose an option:</legend>
+                    <label><input id="option-1" type="radio" name="options" value="option-1" checked> Option 1</label>
+                    <label><input id="option-2" type="radio" name="options" value="option-2"> Option 2</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Which answers are correct?</legend>
+                    <input id="minus-two" type="checkbox" name="answers" value="minus-two" checked> <label for="minus-two">-2</label> 
+                    <input id="two" type="checkbox" name="answers" value="two"> <label for="two">2</label>
+                    <input id="zero" type="checkbox" name="answers" value="zero"> <label for="zero">0</label>
+                    <input id="one" type="checkbox" name="answers" value="one"> <label for="one">1</label>
+    
+                </fieldset>
+                
+                <input type="text" name="username" placeholder="Juanperez12" required> <!-- Collect data from differents ways-->
+                <!-- Default behavior: Submit the forms to the location specified in the form's action-->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Create for the most handsome guy - <a href="https://www.x.com/roaacan" target="_blank">follow me on X</a></p>
+    </footer>    
+</body>
+</html>
+
+<!-- 
+    * Inline elements doesn't appear on a new lines 
+    * Relaying on default behavior may cause confusion.
+    * You use radio buttons for questions where you want only one answer out of multiple  options.
+    * label elements are used to help associate the text for an input element with an input element itself(Specially for assitive technologies like screen readers.)
+        for="id-element" # another way to associate text for an input
+    *  id atribute is used to identify and specific HTML element in the entire page, each id must be unique.
+    * Order of atributies doesn't matter.
+    * To make radio buttons so selecting one radio button automtically deselects the other, both buttons must have the same name attribute.
+    * The data for the button is based on its name and value attributes. Radio buttons share the same name wich is not useful, add a value attribute
+      for convenience, se the button's value attributes to the same value as its id attribute.
+    * fieldset elements is used to grup realted inputs and labels in a form elment.
+    * block-level elements appears on a new line.
+    * legends  elements act as a caption for the content in the fielset element. It gives users context about what they should enter into that part of  the form.
+    *  checkboxes are used for questions which has more than one answers.
+        Add a name atribute same as radio buttons makes it easier to procces your web form for a server, especially when there are multiple checkboxes
+    * Value attribute: It's best practice to include it with any checkboxes o radio buttons on the page. (optional for checkbox buttons)
+    * checked is an atribute that selected an input for default.
+    * footer is used to defined a foot for a document or sections (constains info: author, document, copyright data, link to terms of use, contact info)
+    * All page content elements that should be rendered to the page go inside the body element.
+    * The head elemetns contain metadata about the documetn, such title, link to stylesheet, scripts. Medata is info about the page that isn't displayed  directly  on the page.
+    * title element for the tab for the page
+    * html is the root element for an HTML page wraps all content on the page.
+        lang=".." specify the language of the page
+    * <!DOCTYPE html> known as declaration and ensure the browser tries to meet industry-wide specifications, tells browser that this is a HTML5 document, the lasted version of HTML.
+    * meta elements allows you to set browser behavior
+        charset="utf-8" tells the browser how to encode characters for the page
+-->
